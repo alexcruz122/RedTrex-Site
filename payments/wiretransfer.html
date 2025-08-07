@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wire Transfer Details - RedTrex Technologies</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="Assest/company.png">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: 
+        linear-gradient(135deg, rgba(10,15,44,0.85), rgba(15,61,92,0.85), rgba(17,45,78,0.85)),
+        url('Assest/pexels-evonics-33252814.jpg') no-repeat center center/cover;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+      padding: 40px;
+      max-width: 500px;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .container h1 {
+      margin-bottom: 25px;
+      font-size: 2rem;
+    }
+
+    .bank {
+      margin-bottom: 25px;
+      padding: 15px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .bank h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .bank p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.4rem;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(20px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Wire Transfer Details</h1>
+
+    <div class="bank">
+      <h3>Commercial Bank PLC</h3>
+      <p>NEGOMBO CITY OFFICE</p>
+      <p><strong>Account Name:</strong> W.D.Y FERNANDO</p>
+      <p><strong>Account No:</strong> 8005394377</p>
+    </div>
+
+    <div class="bank">
+      <h3>LOLC Bank</h3>
+      <p>Negombo Branch</p>
+      <p><strong>Account Name:</strong> W.D.Y FERNANDO</p>
+      <p><strong>Account No:</strong> 21110008150</p>
+    </div>
+
+    <div class="bank">
+      <h3>DFCC Bank</h3>
+      <p>Negombo Branch</p>
+      <p><strong>Account Name:</strong> W.D.Y FERNANDO</p>
+      <p><strong>Account No:</strong> 102003402328</p>
+    </div>
+
+    <div class="bank">
+      <h3>NSB</h3>
+      <p>Negombo Branch</p>
+      <p><strong>Account Name:</strong> W.D.Y FERNANDO</p>
+      <p><strong>Account No:</strong> 10009602374</p>
+    </div>
+
+    <a href="../index.html" class="back-btn">Back to Home</a>
+  </div>
+</body>
+</html>
