@@ -1,0 +1,662 @@
+/* -------------------------
+   RESET & GLOBAL STYLES
+------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: 
+    linear-gradient(135deg, rgba(10,15,44,0.8), rgba(15,61,92,0.8), rgba(17,45,78,0.8)),
+    url('https://cdn.wallpapersafari.com/55/38/7dAavD.jpg') no-repeat center center/cover;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* -------------------------
+   NAVIGATION BAR
+------------------------- */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav img {
+  height: 44px;
+  cursor: pointer;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Hide nav on scroll down (mobile only) */
+@media (max-width: 768px) {
+  nav.hide {
+    transform: translateY(-100%);
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+/* -------------------------
+   HERO / CENTER CONTENT
+------------------------- */
+.center-content {
+  text-align: center;
+  margin-top: 25vh;
+}
+
+.center-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  animation: fadeIn 5s ease;
+}
+
+.center-content p {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  animation: fadeIn 5s ease;
+}
+
+/* Glass Buttons */
+.glass-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeIn 5s ease;
+}
+
+.glass-buttons a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.1rem;
+  transition: all 0.35s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.glass-buttons a:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+/* -------------------------
+   ABOUT US SECTION
+------------------------- */
+.about-section {
+  display: flex;
+  justify-content: center;
+  padding: 100px 20px;
+  margin-top: 50px;
+}
+
+.about-container {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease;
+}
+
+.about-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 20px;
+}
+
+/* -------------------------
+   REVIEWS SECTION
+------------------------- */
+.reviews-section {
+  text-align: center;
+  padding: 80px 20px;
+  margin-top: 50px;
+}
+
+.reviews-section h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  animation: fadeIn 2s ease;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,0,0,0.15);
+  transition: all 0.35s ease;
+  animation: fadeIn 2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.review-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.review-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.review-card .stars {
+  color: gold;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5rem;
+}
+
+/* -------------------------
+   SERVICES SECTION
+------------------------- */
+.services-section {
+  text-align: center;
+  padding: 80px 20px;
+  margin-top: 50px;
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  animation: fadeIn 2s ease;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,0,0,0.15);
+  transition: all 0.35s ease;
+  animation: fadeIn 2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.service-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.quote-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.quote-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* -------------------------
+   MAP SECTION
+------------------------- */
+.map-section {
+  text-align: center;
+  padding: 80px 20px;
+  margin-top: 50px;
+}
+
+.map-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease;
+}
+
+.map-glass-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0,0,0,0.15);
+}
+
+.map-glass-container iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.map-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* -------------------------
+   CONTACT PANEL (FIXED)
+------------------------- */
+.contact-slide-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto 80px auto;
+  text-align: center;
+}
+
+.contact-toggle-btn {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 15px 40px;
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  margin: 10px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.contact-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.contact-panel {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  flex-direction: row; /* default */
+}
+
+.contact-panel.open {
+  max-height: 250px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .center-content h1 { font-size: 28px; }
+  .center-content p { font-size: 16px; }
+  .glass-buttons { flex-direction: column; gap: 10px; }
+  .reviews-container, .services-container { flex-direction: column; align-items: center; }
+  .review-card, .service-card { width: 90%; margin-bottom: 15px; }
+  .map-glass-container iframe { height: 250px; }
+
+  /* Contact Panel Responsive Fix */
+  .contact-panel {
+    flex-direction: column;
+  }
+  .contact-panel.open {
+    max-height: 1000px; /* enough for all content */
+  }
+  .contact-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/* Fix background centering on mobile screens */
+@media (max-width: 768px) {
+  body {
+    background-position: center top; /* Keep focus visible */
+    background-size: cover;          /* Ensures it always fills screen */
+  }
+}
+
+/* Payment Methods Section */
+.payment-methods {
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 40px;
+}
+
+.payment-methods h2 {
+  font-size: 2rem;
+  margin-bottom: 35px;
+  color: #fff;
+  animation: fadeIn 2s ease;
+}
+
+/* Payment Logos Container */
+.payment-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Individual Payment Card */
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.payment-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 40px rgba(255,255,255,0.2);
+}
+
+.payment-card img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.payment-card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .payment-card {
+    width: 45%;
+  }
+}
+
+/* Footer */
+.site-footer {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 60px 30px 30px;
+  margin-top: 80px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.footer-info,
+.footer-links {
+  flex: 1 1 280px;
+}
+
+.footer-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+  background: linear-gradient(135deg, #fff, rgba(255,255,255,0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  stroke: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.contact-info p:hover .footer-icon {
+  stroke: #fff;
+  transform: scale(1.1);
+}
+
+.footer-info a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-info a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-links h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.8), transparent);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links li {
+  margin: 0;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-links a::before {
+  content: '→';
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  transform: translateX(8px);
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+  left: -18px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-info,
+  .footer-links {
+    flex: 1 1 100%;
+  }
+  
+  .footer-links a:hover {
+    transform: translateX(0);
+  }
+}
